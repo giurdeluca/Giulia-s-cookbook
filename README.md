@@ -1,85 +1,42 @@
-# 🍽️ Giulia's Recipes in Cooklang
+# What's next
 
-Welcome to my personal collection of **(mostly) Italian recipes** structured using [Cooklang](https://cooklang.org/)! This repository helps me organize, manage, and generate shopping lists for my favorite dishes.
+* Install a syntax highlighting package for your text editor. We have packages for SublimeText and VSCode. See  [cooklang.org](https://cooklang.org/docs/syntax-highlighting/) for full instructions.
+* Add your own recipes. Dive into the Cook ecoysystem and discover how easy it is to write in CookLang. It's the best way to learn the [CookLang syntax](https://cooklang.org/docs/spec/).
+* Check out our [tips and tricks](https://cooklang.org/docs/best-practices/) page.
 
-## 📂 Folder Structure
-
-This repository is structured by **recipe categories**:
-
-```
-.
-├── Antipasti        # Starters
-├── Beverages        # Drinks & Cocktails
-├── Dolci            # Desserts
-├── Piatti_unici     # One-dish meals
-├── Primi            # Pasta & Risotto
-├── Secondi          # Main courses (Meat, Fish, etc.)
-├── meal-plans/      # Weekly meal plans (optional)
-├── shopping-lists/  # Auto-generated shopping lists (optional)
-├── images/          # Recipe images
-│   ├── original-recipes  # Raw photos
-│   └── results-recipes   # Final plated dishes
-└── README.md        # This guide
-```
-
----
-
-## 🍳 How to Use These Recipes
-
-### 🛠 Requirements
-To make the most of these recipes, install **Cooklang CLI** (check documentation [here](https://cooklang.org/cli/)):
+### Read the recipe
 
 ```sh
-# Install Cooklang CLI (if not already installed)
-brew install cooklang/cook/cli  # macOS/Linux
-scoop install cooklang-cli       # Windows
+cook recipe read "Root Vegetable Tray Bake.cook"
 ```
 
-### 📚 Viewing Recipes
-Each recipe is stored as a `.cook` file in **Cooklang format**. You can view them with:
+### Create shopping list
 
 ```sh
-cook recipe read Antipasti/bruschetta.cook
+cook shopping-list \
+  "Neapolitan Pizza.cook" \
+  "Root Vegetable Tray Bake.cook" \
+  "Snack Basket I.cook"
 ```
 
-You can also start a webserver for better visualization
+### Run a server
+
+In directory where you have your recipes run:
+
 ```sh
 cook server
 ```
-then go to  http://127.0.0.1:9080 
 
-### 🛍️ Generating a Shopping List
-To create a shopping list from multiple recipes:
+Then open [http://127.0.0.1:9080](http://127.0.0.1:9080) in your browser.
 
-```sh
-cook shopping-list Primi/carbonara.cook Secondi/ossobuco.cook
-```
+### Automate something
 
-### 🗓️ Meal Planning
-You can create **weekly meal plans** using `.cook` files in the `meal-plans/` folder.
+Explore [the docs](https://cooklang.org/cli/help/), which describe how to use CookCLI's automation tools.
 
-Example:
+### Customize your instance
 
-```sh
-cook plan meal-plans/week-1-meal-plan.cook
-```
+Add aisle configuration information to the `config/aisle.conf` file to tailor your shopping list experience.
 
----
 
-## 📝 Best Practices (from [Cooklang](https://cooklang.org/docs/best-practices/))
 
-1. **Keep ingredient names consistent**  
-   - Example: Use `@olive oil{2%tbsp}` instead of `@extra virgin olive oil`
-  
-2. **Use scalable portions**  
-   - Write recipes to support different servings (e.g., `@spaghetti{100%g}` instead of `100g spaghetti`)
 
-3. **Organize images**  
-   - Store raw photos in `images/original-recipes/`  
-   - Save final plated dishes in `images/results-recipes/`  
-
----
-
-## 🐟 License
-
-Feel free to use and modify these recipes for personal use! 🍕🍝
