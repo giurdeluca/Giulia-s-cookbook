@@ -27,7 +27,7 @@ This repository is structured by **recipe categories**:
 ## 🍳 How to Use These Recipes
 
 ### 🛠 Requirements
-To make the most of these recipes, install **Cooklang CLI**:
+To make the most of these recipes, install **Cooklang CLI** (check documentation [here](https://cooklang.org/cli/)):
 
 ```sh
 # Install Cooklang CLI (if not already installed)
@@ -39,8 +39,14 @@ scoop install cooklang-cli       # Windows
 Each recipe is stored as a `.cook` file in **Cooklang format**. You can view them with:
 
 ```sh
-cook read Antipasti/bruschetta.cook
+cook recipe read Antipasti/bruschetta.cook
 ```
+
+You can also start a webserver for better visualization
+```sh
+cook server
+```
+then go to  http://127.0.0.1:9080 
 
 ### 🛍️ Generating a Shopping List
 To create a shopping list from multiple recipes:
