@@ -1,4 +1,4 @@
-# 🍽️ IGiulia's Recipes in Cooklang
+# 🍽️ Giulia's Recipes in Cooklang
 
 Welcome to my personal collection of **(mostly) Italian recipes** structured using [Cooklang](https://cooklang.org/)! This repository helps me organize, manage, and generate shopping lists for my favorite dishes.
 
@@ -60,7 +60,7 @@ cook plan meal-plans/week-1-meal-plan.cook
 
 ---
 
-## 📝 Best Practices (from [Cooklang](https://cooklang.org/docs/best-practices/)
+## 📝 Best Practices (from [Cooklang](https://cooklang.org/docs/best-practices/))
 
 1. **Keep ingredient names consistent**  
    - Example: Use `@olive oil{2%tbsp}` instead of `@extra virgin olive oil`
